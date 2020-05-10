@@ -1,0 +1,48 @@
+① Websocket接続
+
+② subscribe コマンド送信(購読)
+
+③ event メッセージ受信
+
+④ unsubscribe コマンド送信(購読解除)
+
+⑤ WebSocket 切断
+
+
+■絶対に忘れてはいけない注意事項
+http://ftp.orca.med.or.jp/pub/data/receipt/tec/push-api/push-api-spec.pdf
+
+7. PUSH 通知の機能的制限
+日レセ PUSH 通知には以下の制限がある。
+? pusher クライアントが通信切断時など未接続の期間に発生した PUSH 通知を、クライアント再接
+続後に受信することはできない。
+? PUSH 通知の受信確認および未配達 PUSH 通知の保存機能はない。
+例えば患者登録の PUSH 通知を利用し連携機器側に患者情報を保存する処理を行っているような
+ケースで、一時的に通信回線のダウンがあり pusher との接続が切断された場合、再接続までの間
+に登録された患者の PUSH 通知は送信されない。そのため該当患者の登録情報が連携機器に登録
+されないといった事態が考えられる。
+このような場合は、別途日レセ API を利用しその日登録された患者一覧を比較するなどの同期確認
+処理が必要となる。（別途機能を提供）
+
+
+■json形式でサーバーにデータを送る
+
+
+string returnMessage = string.Format("{0}:こんにちは金城さん", DateTime.Now);
+                    //レスポンス処理　
+                    ArraySegment<byte> returnBuffer = new ArraySegment<byte>(System.Text.Encoding.UTF8.GetBytes(returnMessage));
+                    
+string returnMessage = receiveText + "　サーバーからのレスポンス成功";
+                        ArraySegment<byte> returnBuffer = new ArraySegment<byte>(System.Text.Encoding.UTF8.GetBytes(returnMessage));
+                        await socket.SendAsync(returnBuffer, WebSocketMessageType.Text, true, System.Threading.CancellationToken.None);
+                        
+
+
+
+
+■JSON.NETでシリアライズ化してArraySegmentでjson形式と送信できるかどうかの判断
+サーバー側のC#でjson形式かどうか判定させる処理をつくってチェックする
+
+■JSON形式を判別するには、4.7.2以上の.NET Frameworkで使用可能
+
+■System.Text.JsonでJSONを使用する

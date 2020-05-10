@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\SWebSockets\SWebSockets\bin\Debug\SWebSockets.exe.config
+C:\Users\User\source\repos\SWebSockets\SWebSockets\bin\Debug\SWebSockets.exe
+C:\Users\User\source\repos\SWebSockets\SWebSockets\bin\Debug\SWebSockets.pdb
+C:\Users\User\source\repos\SWebSockets\SWebSockets\bin\Debug\SWebSockets.xml
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.vbprojAssemblyReference.cache
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.Form1.resources
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.Resources.resources
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.vbproj.GenerateResource.cache
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.vbproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.exe
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.xml
+C:\Users\User\source\repos\SWebSockets\SWebSockets\obj\Debug\SWebSockets.pdb
